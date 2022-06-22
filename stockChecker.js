@@ -1,6 +1,5 @@
-/*
-Stock checker
-Let's write a program that filters out products that are out of stock.
+
+/* Let's write a program that manages products in stock.
 Write a function that takes an array of products as a parameter. 
 The product should be an object with name, price, and stockAmount. 
 Add multiple products to the array, with varying stock amount, 
@@ -22,20 +21,27 @@ const products = [
     {name: "Scruber", price: 7, stockAmount: 0}
 ];
 //console.log(products);
-console.log(products.length);
+//console.log(products.length);
 
-function stockBalance (products) {
+function stockBalance(){
     let result = 0;
-    for (i = 0; i < products.lenght; i++) {
-        result = result + products[i];
+    for (i = 0; i < products.lenght; i++) {  
+        result = result + products[i].stockAmount;
     }
     return result;
 }
 
+
+
+
 console.log(stockBalance(products));
 
-
+/*for (let i = 0; i < products.length; i++){
+    console.log(products[i].stockAmount);
+} >>>>>>But this one works
+*/
     
 
      
 
+    
