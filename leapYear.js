@@ -10,14 +10,12 @@ To determine whether a year is a leap year, follow these steps:
 */
 
 
-const someYear = 2018;
+const year = 2024;
 function stepFive() { 
-    let result = "The year is not a leap year (it has 365 days).";
-    return result;
+    return false;
  }
 function stepFour() { 
-    let result = "The year is a leap year (it has 366 days).";
-    return result;
+    return true;
  }
 function stepThree(year) {
     let result;
@@ -48,5 +46,4 @@ function stepOne(year) {
 }
 
 
-//console.log(stepOne(2024));
-stepOne(2024);
+console.log(stepOne(year));
