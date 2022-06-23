@@ -10,7 +10,7 @@ const b = 5;
 const c = 9;
 
 function comparator(a,b,c) {
-return largest(a,b,c) + " and " + smallest(a,b,c);
+return largest(a,b,c) + " , " + smallest(a,b,c);
 }
 
 function largest(a,b,c) {
