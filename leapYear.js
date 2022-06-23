@@ -10,13 +10,15 @@ To determine whether a year is a leap year, follow these steps:
 */
 
 
-const year = 2024;
+
 function stepFive() { 
     return false;
  }
+
 function stepFour() { 
     return true;
  }
+
 function stepThree(year) {
     let result;
     if (year % 400 === 0) {
@@ -26,6 +28,7 @@ function stepThree(year) {
     }
     return result;
 }
+
 function stepTwo(year) { 
     let result;
     if (year % 100 === 0) {
@@ -35,6 +38,7 @@ function stepTwo(year) {
     }
     return result;
 }
+
 function stepOne(year) {
     let result;
     if (year % 4 === 0) {
@@ -45,5 +49,5 @@ function stepOne(year) {
     return result;
 }
 
-
+const year = 2024;
 console.log(stepOne(year));

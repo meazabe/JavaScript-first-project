@@ -22,6 +22,11 @@ const products = [
 ];
 //console.log(products);
 //console.log(products.length);
+/*
+for (let i = 0; i < products.length; i++){
+    console.log(products[i].stockAmount);
+} 
+*/
 
 function stockBalance(){
     let result = 0;
@@ -31,15 +36,9 @@ function stockBalance(){
     return result;
 }
 
-
-
-
 console.log(stockBalance(products));
 
-/*for (let i = 0; i < products.length; i++){
-    console.log(products[i].stockAmount);
-} >>>>>>But this one works
-*/
+
     
 
      
