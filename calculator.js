@@ -8,7 +8,7 @@ Then based on the type of calculation given
 (addition, subtraction, multiplication, division), 
 it performs the calculation and returns the result. 
 */
-//const c = '+';
+//const operator = '+';
 function calculator(a,operation,b) {
     let result;
     if (operation == '+') {
