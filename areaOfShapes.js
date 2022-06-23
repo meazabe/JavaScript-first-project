@@ -25,13 +25,13 @@ const square = {type: "Square", sides: {side: 6}};
 
 function areaCalculator (shape) {
     let area = 0;
-    if (shape.type) {
+    if (shape.type === "Triangle") {
         area = 0.5 * (triangle.sides.base * triangle.sides.height);
-    } else if (shape.type) {
+    } else if (shape.type === "Rectangle") {
         area = (rectangle.sides.width) * (rectangle.sides.height);
-    } else if (shape.type) {
+    } else if (shape.type === "Circle") {
         area = (circle.sides.pi) * (circle.sides.radius * circle.sides.radius);
-    } else if (shape.type) {
+    } else if (shape.type === "Square") {
         area = (square.sides.side * square.sides.side);
     }
     return area;
