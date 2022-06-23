@@ -16,23 +16,23 @@ Pass an array, loop thru the array, everytime you translate one element,
 collect it into another array like a basket
 */
 
-const nucleotides1 = ["C", "G", "A", "T", "G", "T", "C", "A", "G", "A", "T", "C"];
-function nucleotiedsMutchMaker(nucleotides1) {
+const nucleotides = ["C", "G", "A", "T", "G", "T", "C", "A", "G", "A", "T", "C"];
+function nucleotiedsMutchMaker(nucleotides) {
     let result = [];
-    for (let i = 0; i < nucleotides1.length; i++) {
-         if ( nucleotides1[i] === "A") {
+    for (let i = 0; i < nucleotides.length; i++) {
+         if ( nucleotides[i] === "A") {
         result.push("T");
-    } else if (nucleotides1[i] === "G") {
+    } else if (nucleotides[i] === "G") {
         result.push("C");
-    } else if (nucleotides1[i] === "C") {
+    } else if (nucleotides[i] === "C") {
         result.push("G");
-    } else if (nucleotides1[i] === "T") {
+    } else if (nucleotides[i] === "T") {
         result.push("A");
     }
     }
    return result;
 }
-console.log(nucleotiedsMutchMaker(nucleotides1));
+console.log(nucleotiedsMutchMaker(nucleotides));
 
 
 

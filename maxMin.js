@@ -4,18 +4,20 @@ which calculate and return the largest and smallest of these numbers.
 The first function should print what is returned from 
 the functions largest and smallest.
 */
-const a = 0;
-const b = 0;
-const c = 0;
+/*
+const a = 8;
+const b = 5;
+const c = 9;
+*/
 function comparator(a,b,c) {
     function largest(a,b,c) {
     let result;
     if (a > b && a > c) {
-        result = a + " is the largest.";
+        result = a;
     } else if (b > a && b > c) {
-        result = b + " is the largest.";
+        result = b;
     } else if (c > a && c > b) {
-        result = c + " is the largest.";
+        result = c;
     }
     return result;
     }
@@ -23,24 +25,25 @@ function comparator(a,b,c) {
 function smallest(a,b,c) {
     let result;
     if (a < b && a < c) {
-        result = a + " is the smallest and ";
+        result = a;
     } else if (b < a && b < c) {
-        result = b + " is the smallest and ";
+        result = b;
     } else if (c < a && c < b) {
-        result = c + " is the smallest and ";
+        result = c;
     } else {
         result = largest;
     }
     return result;
     }
 
-return smallest(a,b,c) + largest(a,b,c);
+return smallest(a,b,c) + " and " + largest(a,b,c);
 }
 
 
 
-console.log(comparator(9,7,1));
 
+console.log(comparator(9,7,1));
+/*
 
 // I saw this max and min method on W3 but nothing is clear for me
 const points = [40, 100, 1, 5, 250, 10];
@@ -70,5 +73,6 @@ function myArrayMax(arr) {
   }
 
   console.log(myArrayMin(points));
+  */
 // Would you consider to explain maaybe in the next meeting? 
 // Becouse the code is shorter than the one I did for the exercise but not clear.
