@@ -4,25 +4,31 @@ which calculate and return the largest and smallest of these numbers.
 The first function should print what is returned from 
 the functions largest and smallest.
 */
-/*
+
 const a = 8;
 const b = 5;
 const c = 9;
-*/
-function comparator(a,b,c) {
-    function largest(a,b,c) {
-    let result;
-    if (a > b && a > c) {
-        result = a;
-    } else if (b > a && b > c) {
-        result = b;
-    } else if (c > a && c > b) {
-        result = c;
-    }
-    return result;
-    }
 
-function smallest(a,b,c) {
+function comparator(a,b,c) {
+return largest(a,b,c) + " and " + smallest(a,b,c);
+}
+
+function largest(a,b,c) {
+  let result;
+  if (a > b && a > c) {
+      result = a;
+  } else if (b > a && b > c) {
+      result = b;
+  } else if (c > a && c > b) {
+      result = c;
+  } else {
+    result = smallest();
+  }
+  return result;
+  }
+
+
+  function smallest(a,b,c) {
     let result;
     if (a < b && a < c) {
         result = a;
@@ -31,13 +37,11 @@ function smallest(a,b,c) {
     } else if (c < a && c < b) {
         result = c;
     } else {
-        result = largest;
+        result = largest();
     }
     return result;
     }
 
-return largest(a,b,c) + " and " + smallest(a,b,c);
-}
 
 
 
