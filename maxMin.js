@@ -36,7 +36,7 @@ function smallest(a,b,c) {
     return result;
     }
 
-return smallest(a,b,c) + " and " + largest(a,b,c);
+return largest(a,b,c) + " and " + smallest(a,b,c);
 }
 
 
