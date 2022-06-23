@@ -9,15 +9,15 @@ Then based on the type of calculation given
 it performs the calculation and returns the result. 
 */
 //const c = '+';
-function calculator(a,c,b) {
+function calculator(a,operation,b) {
     let result;
-    if (c == '+') {
+    if (operation == '+') {
         result = a + b;
-    } else if (c == '-') {
+    } else if (operation == '-') {
         result = a - b;
-    } else if (c == '*') {
+    } else if (operation == '*') {
         result = a * b;
-    } else if (c == '/') {
+    } else if (operation == '/') {
         result = a / b;
     }
 
