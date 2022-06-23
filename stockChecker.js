@@ -12,7 +12,7 @@ total should be 4+6+5=15
 */
 
 const products = [
-    {name: "Towel", price: 25, stockAmount: 10},
+    {name: "Towel", price: 25, stockAmount: 0},
     {name: "Shower gell", price: 5, stockAmount: 9},
     {name: "Shampo", price: 6, stockAmount: 10},
     {name: "Conditioner", price: 6, stockAmount: 8},
@@ -25,7 +25,7 @@ const products = [
 
 function stockBalance(){
     let result = 0;
-    for (i = 0; i < products.lenght; i++) {  
+    for (i = 0; i < products.length; i++) {  
         result = result + products[i].stockAmount;
     }
     return result;
