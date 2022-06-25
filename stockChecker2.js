@@ -8,7 +8,7 @@ Write a function that returns the products that are available in stock.
 function availableProductsFilter(){
     for (let i = 0; i < products.length; i++){
         if (products[i].stockAmount > 0){
-            console.log(products[i].name)
+            console.log(products[i].name);
         } 
     }
 }
@@ -20,7 +20,8 @@ const products = [
     {name: "Conditioner", price: 6, stockAmount: 0},
     {name: "Scrub", price: 8, stockAmount: 8},
     {name: "Shower cape", price: 3, stockAmount: 9},
-    {name: "Scruber", price: 7, stockAmount: 0},
+    {name: "Scruber", price: 7, stockAmount: 2},
+    {name: "hair brush", price: 4, stockAmount: 13}
 ];
 console.log(availableProductsFilter(products));
 
