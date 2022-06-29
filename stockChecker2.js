@@ -9,7 +9,7 @@ function availableProductsFilter(products){
      let result = [];
     for (let i = 0; i < products.length; i++){
         if (products[i].stockAmount > 0){
-            result.push(products[i].name);
+            result.push(products[i]);
         } 
     }
     return result;
