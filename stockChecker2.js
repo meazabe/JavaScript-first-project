@@ -5,12 +5,14 @@ Write a function that returns the products that are available in stock.
  availableProduct = products[i].name + " not available";
  */
 
-function availableProductsFilter(){
+function availableProductsFilter(products){
+     let result = [];
     for (let i = 0; i < products.length; i++){
         if (products[i].stockAmount > 0){
-            console.log(products[i].name);
+            result.push(products[i].name);
         } 
     }
+    return result;
 }
 
 const products = [
@@ -23,8 +25,8 @@ const products = [
     {name: "Scruber", price: 7, stockAmount: 2},
     {name: "hair brush", price: 4, stockAmount: 13}
 ];
-console.log(availableProductsFilter(products));
 
+console.log(availableProductsFilter(products));
 
 
 
