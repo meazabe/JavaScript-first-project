@@ -18,17 +18,14 @@ Write a function that takes the products and a product name.
     ];
    
     function productNameChecker(name){
-        let result;
         for (let i = 0; i < products.length; i++){
             if (products[i].name === name){
-                result = true;
-            } else {
-                result = false;
-            }
-        }
-        return result;
+                return true;
+            } 
+        } 
+        return false;
     }
-    let productName = "Scrub";
+    let productName = "hair brush";
 
    console.log(productNameChecker(productName));
 
