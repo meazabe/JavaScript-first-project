@@ -60,12 +60,50 @@ const pros = products.reduce( (accumulator, number) => {
 }, 0);
 
 const sumOfPros = products.filter((name) => { 
-  const listOfPros = [];
-  //const length = listOfPros.length;
-  if (name.includes("Pro")) {
-  listOfPros.push(name);
-  }  return listOfPros.length;
+  if (name.includes("Pro"))  return name;
 });
+//console.log(sumOfPros.length);
 
-console.log(sumOfPros);
+// Task 7. Print an array that has either iOS or Android for each product based on the name
+// e.g. if the product has iphone in the name, it should be iOS; otherwise it should be android
+// the resulting array could be ["iOS", "iOS", "iOS", "Android", "Android", "Android", "Android"...]
 
+const typeOfPhones = products.map((str) => {
+  if (str.includes("iPhone")) {
+    return "iOS";
+  } else {
+    return "Android";
+  }
+});
+//console.log(typeOfPhones);
+
+// Task 8. Print an array with the count of words for each product. Numbers could be regarded as words
+// the resulting array could look sth like this [2, 3, 4, 2, 2, 3, 3, 2, 2, 3, 3, 3, 2, 2...]
+
+const wordCount = products.map((str) => { 
+ const words = str.split(" ")
+  return words.length;
+});
+//console.log(wordCount);
+
+// Task 9. Print only the products that end with "Pro"
+
+const onlyPros = products.filter((str) => {
+  if (str.slice(-3) === "Pro") {
+    return str;
+  }
+});
+//console.log(onlyPros);
+
+// Task 10. Print the products that are NOT in the favorites array
+
+
+// Task 11. Check if all the items in favorites are iPhones (have "iPhone" in the name). Print the boolean output.
+
+let checkFavorites = favorites.every((name) => name.includes("iPhone"));
+console.log(checkFavorites);
+
+// Task 12. Check if any of the items in favorites contain the number 12 or 13. Print the boolean output.
+
+checkFavorites = favorites.some((name) => name.includes(12) || name.includes(13));
+console.log(checkFavorites);
