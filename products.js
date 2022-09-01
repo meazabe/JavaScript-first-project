@@ -51,7 +51,7 @@ let filteredFavorites = favorites.filter((name)=> { return name != "OnePlus 10 P
 
 // Task 6. Calculate and print the number of products that have "Pro" in their names
 
-const pros = products.reduce( (accumulator, number) => {
+const pros = products.reduce((accumulator, number) => {
   if (number.includes("Pro")) {
     return accumulator += 1;
   } else {
@@ -96,14 +96,17 @@ const onlyPros = products.filter((str) => {
 //console.log(onlyPros);
 
 // Task 10. Print the products that are NOT in the favorites array
-
+const notFavorites = products.filter((name) => {  return !favorites.find((item) => name === item); });
+console.log(notFavorites); 
 
 // Task 11. Check if all the items in favorites are iPhones (have "iPhone" in the name). Print the boolean output.
 
 let checkFavorites = favorites.every((name) => name.includes("iPhone"));
-console.log(checkFavorites);
+//console.log(checkFavorites);
 
 // Task 12. Check if any of the items in favorites contain the number 12 or 13. Print the boolean output.
 
 checkFavorites = favorites.some((name) => name.includes(12) || name.includes(13));
-console.log(checkFavorites);
+//console.log(checkFavorites);
+
+
