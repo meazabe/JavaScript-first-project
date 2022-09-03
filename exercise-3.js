@@ -29,6 +29,8 @@ const getRecipes = () => {
     ];
 }
 
+
+
 //console.log(getRecipes());
 //console.dir(getRecipes, {depth:null});
 
@@ -51,8 +53,26 @@ const newRecipe = {
 };
 
 const addRecipe = (recipes, recipe) => {
-        if (recipe.includes("name") && recipe.includes("vegan"))
-        return recipes.concat(recipe);}
+        if (recipe.name && recipe.vegan != null)
+        return recipes.concat(recipe);
+    }
 
 //console.log(addRecipe(getRecipes(),newRecipe));
+//console.dir(addRecipe(getRecipes(),newRecipe), {depth:null});
+
+// Task: 2. delete a recipe that matches a given name
+/* const deleteRecipe = (recipes) => {
+    const filteredOut = recipes.filter((recipes) => { 
+        return !recipes.name === "salmon soup";
+    })
+    return filteredOut;
+  } */
+
+const deleteRecipe = (recipes, recipe) => {
+    const filteredOut = recipes.filter((recipes) => { 
+        return !recipes.name === recipe;
+    })
+    return filteredOut;
+}
+console.dir(deleteRecipe(getRecipes(),"salmon soup"), {depth:null});
 
