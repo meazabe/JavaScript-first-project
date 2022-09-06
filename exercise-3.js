@@ -41,6 +41,8 @@ const getRecipes = () => {
     // return recipes array
 //  }
 
+let recipes = getRecipes();
+
 const newRecipe = {
     name: "couscous verde bowl",
     vegan: true,
@@ -52,27 +54,52 @@ const newRecipe = {
     ]
 };
 
-const addRecipe = (recipes, recipe) => {
-        if (recipe.name && recipe.vegan != null)
-        return recipes.concat(recipe);
+const addRecipe = (recipes, newRecipe) => {
+        if (newRecipe.name && newRecipe.vegan != null)
+        recipes.push(newRecipe)
+        return recipes;
     }
 
+//console.log(recipes);
+//console.dir(recipes, {depth:null});
 //console.log(addRecipe(getRecipes(),newRecipe));
-//console.dir(addRecipe(getRecipes(),newRecipe), {depth:null});
-
+//console.dir(addRecipe(recipes,newRecipe), {depth:null});
+//recipes = addRecipe;
+//console.dir(recipes(recipes, newRecipe), {depth:null});
+recipes = addRecipe(recipes,newRecipe);
+//console.dir(recipes, {depth:null});
 // Task: 2. delete a recipe that matches a given name
-/* const deleteRecipe = (recipes) => {
-    const filteredOut = recipes.filter((recipes) => { 
-        return !recipes.name === "salmon soup";
-    })
-    return filteredOut;
-  } */
 
 const deleteRecipe = (recipes, recipe) => {
-    const filteredOut = recipes.filter((recipes) => { 
-        return !recipes.name === recipe;
+    const filteredOut = recipes.filter((recipe) => { 
+        return recipe.name != "salmon soup";
     })
     return filteredOut;
 }
-console.dir(deleteRecipe(getRecipes(),"salmon soup"), {depth:null});
+//console.dir(deleteRecipe(recipes), {depth:null});
+recipes = deleteRecipe(recipes);
+//console.dir(recipes, {depth:null});
+
+// Task: 3. get only vegan recipes
+
+const getVegan = recipes.filter((recipe) => {
+    return recipe.vegan === true;
+})
+
+//console.dir(getVegan, {depth:null});
+
+// Task: 4. get the names of the ingredients of a recipe
+const getIngredientNames = (recipes, recipeName) => {
+    const findName = recipes.find((recipe) => { if (recipe.name.includes(recipeName))
+        return recipeName;
+    })
+    const ingredientsName = findName.map((recipe) => {
+    let ingredients = [];
+    ingredients = recipe.ingredients;
+    return ingredients;
+    });
+    return ingredientsName;
+} 
+
+console.log(getIngredientNames(recipes, "carbonara"));
 
